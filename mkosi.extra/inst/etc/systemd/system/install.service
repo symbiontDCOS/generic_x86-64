@@ -1,0 +1,10 @@
+[Unit]
+Description=Symbiont SlimOS Installer
+ConditionFirstBoot=yes
+
+[Service]
+Type=oneshot
+ExecStart=/usr/bin/ssinstall.sh
+
+[Install]
+WantedBy=multi-user.target

@@ -1,0 +1,20 @@
+#!/usr/bin/sh
+exec tail -n +3 $0
+# This file provides an easy way to add custom menu entries.  Simply type the
+# menu entries you want to add after this comment.  Be careful not to change
+# the 'exec tail' line above.
+menuentry 'Symbiont SlimOS 2108.1 (RootFS)' {
+  search --no-floppy --set=root --label root
+  linux /boot/vmlinuz-5.13.16-200.fc34.x86_64 root=LABEL=root rw rootflags=subvol=/srv/images/rootfs_2108.1.img rhgb selinux=0 audit=0
+  initrd /boot/initramfs-5.13.16-200.fc34.x86_64.img
+}
+menuentry 'Symbiont SlimOS 2108 (RootFS)' {
+  search --no-floppy --set=root --label root
+  linux /boot/vmlinuz-5.13.16-200.fc34.x86_64 root=LABEL=root rw rootflags=subvol=/srv/images/rootfs_2108.img rhgb selinux=0 audit=0
+  initrd /boot/initramfs-5.13.16-200.fc34.x86_64.img
+}
+menuentry 'Symbiont SlimOS 2108 (CoreFS-Rescue)' {
+  search --no-floppy --set=root --label root
+  linux /boot/vmlinuz-5.13.16-200.fc34.x86_64 root=LABEL=root rw rhgb selinux=0 audit=0
+  initrd /boot/initramfs-5.13.16-200.fc34.x86_64.img
+}

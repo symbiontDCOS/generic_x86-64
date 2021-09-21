@@ -1,0 +1,52 @@
+# corefs configuration
+[Distribution]
+Distribution=fedora
+Release=34
+
+[Output]
+Bootable=yes
+BootProtocols=bios
+Format=gpt_btrfs
+Hostname=corefs_2108
+Output=corefs_2108.img
+OutputDir=mkosi.output/corefs/2108
+
+
+[Packages]
+Cache=../__sharedCache__
+ExtraTrees=mkosi.extra/corefs
+Packages=
+	btrfs-progs
+	dmidecode
+	grub2-common.noarch
+	grub2-efi-ia32
+	grub2-efi-ia32-cdboot
+	grub2-efi-x64
+	grub2-efi-x64-cdboot
+	grub2-pc
+	grub2-pc-modules
+	grub2-tools
+	grub2-tools-efi
+	grub2-tools-extra
+	grub2-tools-minimal
+	grubby
+	htop
+	openssh-server
+	passwd
+	procps-ng
+	shadow-utils
+	systemd-networkd
+	usbutils
+	zstd
+
+[Partitions]
+RootSize=2G
+
+[Validation]
+BMap=yes
+CheckSum=yes
+Sign=no
+Key=boxos_signature
+Password=changeme
+
+

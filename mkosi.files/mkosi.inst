@@ -1,0 +1,39 @@
+# inst configuration
+# The default installer
+[Distribution]
+Distribution=fedora
+Release=34
+
+[Output]
+Bootable=yes
+BootProtocols=uefi
+Format=gpt_btrfs
+Hostname=installer
+Output=inst_2108.img
+OutputDir=mkosi.output/inst/2108
+
+
+[Packages]
+Cache=../__sharedCache__
+ExtraTrees=mkosi.extra/inst
+Packages=
+	btrfs-progs
+	dmidecode
+	htop
+	openssh-server
+	passwd
+	procps-ng
+	shadow-utils
+	systemd-networkd
+	usbutils
+	zstd
+
+[Partitions]
+RootSize=2G
+
+[Validation]
+BMap=yes
+CheckSum=yes
+Sign=no
+Key=boxos_signature
+Autologin=yes

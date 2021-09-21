@@ -1,0 +1,11 @@
+NAME="Symbiont SlimOS"
+VERSION="2108 (Installer)"
+ID=slimos
+VERSION_ID=2108
+VERSION_CODENAME=""
+PLATFORM_ID="platform:slimos2108"
+PRETTY_NAME="Symbiont SlimOS 2108 (Installer)"
+ANSI_COLOR="0;34"
+LOGO=fedora-logo-icon
+CPE_NAME="cpe:/o:symbiont:slimos:2108"
+HOME_URL="https://symbiontproject.org/"
