@@ -25,6 +25,7 @@ Packages=
 	shadow-utils
 	systemd-networkd
 	usbutils
+	wget
 	zstd
 
 [Partitions]

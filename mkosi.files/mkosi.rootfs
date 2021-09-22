@@ -5,11 +5,10 @@ Release=34
 
 [Output]
 Bootable=no
-BootProtocols=bios
 Format=subvolume
 Hostname=localhost
-Output=rootfs_2108.1.img
-OutputDir=mkosi.output/rootfs/2108.1
+Output=rootfs_2108.img
+OutputDir=mkosi.output/rootfs/2108
 
 
 [Packages]
@@ -28,10 +27,11 @@ Packages=
 	systemd-networkd
 	usbutils
 	vim-enhanced
+	wget
 	zstd
 
 [Partitions]
-RootSize=20G
+RootSize=2G
 
 [Validation]
 BMap=yes
