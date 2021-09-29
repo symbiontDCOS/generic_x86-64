@@ -9,8 +9,8 @@ Bootable=yes
 BootProtocols=uefi
 Format=gpt_btrfs
 Hostname=installer
-Output=inst_2108.img
-OutputDir=mkosi.output/inst/2108
+Output=inst_2109.img
+OutputDir=mkosi.output/inst/2109
 
 
 [Packages]

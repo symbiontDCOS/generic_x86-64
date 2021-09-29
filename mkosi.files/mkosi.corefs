@@ -5,11 +5,12 @@ Release=34
 
 [Output]
 Bootable=yes
-BootProtocols=uefi
+BootProtocols=bios
 Format=gpt_btrfs
-Hostname=corefs_2108
-Output=corefs_2108.img
-OutputDir=mkosi.output/corefs/2108
+Hostname=corefs_2109
+Output=corefs_2109.img
+OutputDir=mkosi.output/corefs/2109
+WithUnifiedKernelImages=no
 
 
 [Packages]
@@ -18,6 +19,16 @@ ExtraTrees=mkosi.extra/corefs
 Packages=
 	btrfs-progs
 	dmidecode
+	grub2-common.noarch
+	grub2-efi-x64
+	grub2-efi-x64-cdboot
+	grub2-pc
+	grub2-pc-modules
+	grub2-tools
+	grub2-tools-efi
+	grub2-tools-extra
+	grub2-tools-minimal
+	grubby
 	htop
 	openssh-server
 	passwd
@@ -38,5 +49,3 @@ CheckSum=yes
 Sign=no
 Key=boxos_signature
 Password=changeme
-
-

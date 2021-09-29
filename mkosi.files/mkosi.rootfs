@@ -1,14 +1,14 @@
 # rootfs configuration
 [Distribution]
 Distribution=fedora
-Release=34
+Release=33
 
 [Output]
 Bootable=no
 Format=subvolume
 Hostname=localhost
-Output=rootfs_2108.img
-OutputDir=mkosi.output/rootfs/2108
+Output=rootfs_2102.img
+OutputDir=mkosi.output/rootfs/2102
 
 
 [Packages]
@@ -17,14 +17,19 @@ ExtraTrees=mkosi.extra/rootfs
 Packages=
 	btrfs-progs
 	dmidecode
+	dnf
 	htop
+	kernel-core
 	openssh-server
 	passwd
+	pciutils
 	procps-ng
 	python3-pystemd
 	shadow-utils
 	systemd-container
 	systemd-networkd
+	systemd-pam
+	systemd-udev
 	usbutils
 	vim-enhanced
 	wget
