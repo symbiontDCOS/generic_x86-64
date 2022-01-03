@@ -1,43 +1,37 @@
-# rootfs configuration
+# corefs configuration
 [Distribution]
 Distribution=fedora
-Release=35
+Release=34
 
 [Output]
-Bootable=no
-Format=subvolume
-Hostname=localhost
-#Output=rootfs_2201rc1.img
-OutputDir=mkosi.output/rootfs/2201
-ImageVersion=2201.0
-ImageID=rootfs
+Bootable=yes
+BootProtocols=uefi
+Format=gpt_btrfs
+Hostname=corefs_2109
+Output=corefs_2109.img
+OutputDir=mkosi.output/corefs/2109
+WithUnifiedKernelImages=no
 
 
 [Packages]
 Cache=../__sharedCache__
-ExtraTrees=mkosi.extra/rootfs
+ExtraTrees=mkosi.extra/corefs
 Packages=
 	btrfs-progs
 	dmidecode
-	dnf
 	htop
 	openssh-server
 	passwd
-	pciutils
 	procps-ng
-	python3-pystemd
 	shadow-utils
-	systemd-container
 	systemd-networkd
-	systemd-pam
-	systemd-udev
 	usbutils
-	vim-enhanced
 	wget
 	zstd
 
 [Partitions]
 RootSize=2G
+SwapSize=2G
 
 [Validation]
 BMap=yes
@@ -45,5 +39,3 @@ CheckSum=yes
 Sign=no
 Key=boxos_signature
 Password=changeme
-Ssh=yes
-

@@ -1,21 +1,19 @@
-# rootfs configuration
+# nsrootfs configuration
 [Distribution]
 Distribution=fedora
 Release=35
 
 [Output]
 Bootable=no
-Format=subvolume
+Format=directory
 Hostname=localhost
-#Output=rootfs_2201rc1.img
-OutputDir=mkosi.output/rootfs/2201
-ImageVersion=2201.0
-ImageID=rootfs
+OutputDir=mkosi.output/nsrootfs/2201
+ImageID=nsrootfs
 
 
 [Packages]
 Cache=../__sharedCache__
-ExtraTrees=mkosi.extra/rootfs
+ExtraTrees=mkosi.extra/nsrootfs
 Packages=
 	btrfs-progs
 	dmidecode
@@ -40,10 +38,9 @@ Packages=
 RootSize=2G
 
 [Validation]
-BMap=yes
-CheckSum=yes
+BMap=no
+CheckSum=no
 Sign=no
 Key=boxos_signature
 Password=changeme
 Ssh=yes
-

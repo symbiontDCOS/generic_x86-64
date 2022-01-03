@@ -1,0 +1,11 @@
+NAME="Symbiont SlimOS"
+VERSION="2201 (NSRootFS)"
+ID=slimos
+VERSION_ID=2201
+VERSION_CODENAME=""
+PLATFORM_ID="platform:slimos2201"
+PRETTY_NAME="Symbiont SlimOS 2201 (RootFS)"
+ANSI_COLOR="0;34"
+LOGO=fedora-logo-icon
+CPE_NAME="cpe:/o:symbiont:slimos:2201"
+HOME_URL="https://symbiontproject.org/"
